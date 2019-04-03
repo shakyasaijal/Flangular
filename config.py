@@ -1,0 +1,4 @@
+
+db = None
+TOKEN_SECRET = 'IQLECT_SECRET_KEY'
+

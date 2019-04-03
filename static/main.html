@@ -1,0 +1,28 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>
+	
+	
+		<div id="header" >
+			<p id="Paste"> Paste URL: <input id="Search" type="text" placeholder="Search" ng-model="url" > <button id="button" ng-click="myFunction()"> Click</button> </p>
+		</div>
+		<div id="body"> 
+			<div id="area">
+				<table>
+					<tr>
+						<th>Issue #</th>
+						<th>Title</th>
+						<th>Created By</th>
+						<th>Created At</th>
+						<th>Link</th>
+					</tr>
+					<tr ng-repeat="x in data">
+						<td><a ng-href="#!IssueIdComments/{{owner}}/{{repo}}/{{x.number}}" ng-bind="x.number"></a></td>
+						<td ng-bind="x.title"></td>
+						<td ng-bind="x.user.login"></td>
+						<td ng-bind="x.created_at"></td>
+						<td ng-bind="x.html_url"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	
+</body></html>
