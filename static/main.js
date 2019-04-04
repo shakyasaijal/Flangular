@@ -36,7 +36,7 @@ app.run(function ($rootScope, $auth) {
 
             if (requiredLogin && !$auth.isAuthenticated()) {
                 event.preventDefault();
-//                $state.go('login');
+               $state.go('login');
         }
     });
 
